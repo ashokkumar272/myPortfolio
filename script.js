@@ -9,7 +9,12 @@ menuBtn.addEventListener('click', ()=>{
         menuList.style.display = 'none';
     }
 
-})
+});
+document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !menuList.contains(e.target)) {
+        menuList.style.display = 'none'; // Hide the menu
+    }
+});
 
 // const menuBtn = document.getElementById('menubtn');
 // const menuList = document.getElementById('menuList');

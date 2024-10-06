@@ -48,7 +48,7 @@ background-color: slategray;
     width: 100px;
     right: 30px;
     top: 50px;
-    padding: 0px 20px;
+    padding: 10px 20px;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -56,6 +56,13 @@ background-color: slategray;
     border-radius: 10px;
     display: none;
     
+}
+#menuList li a:link{
+    text-decoration: none;
+    color: black;
+}
+#menuList li a:visited{
+    color: black;
 }
 
 
@@ -84,25 +91,6 @@ img{
     }
 }
 
-@media only screen and (max-width: 1144px) {
-    .container{
-        margin: 20px;
-    }
-    .main{
-        display: flex;
-        flex-direction: column-reverse;
-        /* gap: 10px; */
-        padding: 0;
-        height: 80vh;
-        justify-content: space-around;
-    }
-    nav{
-        padding: 20px;
-        justify-content: space-between;
-    }
-    
-}
-
 .card2{
     padding: 50px;
 }
@@ -122,3 +110,24 @@ img{
 .content img{
     border-radius: 10px;
 }
+
+@media only screen and (max-width: 1144px) {
+    .container{
+        margin: 20px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        /* gap: 10px; */
+        padding: 0;
+        height: 80vh;
+        justify-content: space-around;
+    }
+    nav{
+        padding: 20px;
+        justify-content: space-between;
+    }
+    
+}
+
+
