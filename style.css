@@ -1,46 +1,49 @@
-.container{
-    margin: 100px 200px;
+/* General Container */
+.container {
+    margin: 0px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: static;
-    
 }
 
-nav{
+/* Navigation Bar */
+.navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0px 50px;
-    
 }
-.logo{
+
+.logo {
     font-size: 1.5rem;
     font-weight: bolder;
 }
-.menu ul{
+
+.menu-list {
     display: flex;
     list-style: none;
-    
+    font-size: 1.2rem;
 }
-.menu ul li{
-    margin: 0px 12px;
+
+.menu-list li {
+    margin: 0px 0px;
     cursor: pointer;
-    padding: 2px 5px;
+    padding: 2px 15px;
     border-radius: 5px;
 }
 
-.menu ul li a:link{
+.menu-list li a:link {
     text-decoration: none;
     color: black;
 }
-.menu ul li:hover{
-background-color: slategray;
+
+.menu-list li:hover {
+    background-color: rgb(184, 184, 184);
 }
 
-#menuList{
+/* Mobile Menu List */
+#menuList {
     list-style: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
@@ -55,79 +58,200 @@ background-color: slategray;
     gap: 10px;
     border-radius: 10px;
     display: none;
-    
 }
-#menuList li a:link{
+
+#menuList li a:link {
     text-decoration: none;
     color: black;
 }
-#menuList li a:visited{
+
+#menuList li a:visited {
     color: black;
 }
 
-
-.main{
+/* Hero Section */
+.hero-section {
     display: flex;
     padding: 80px 0px;
     justify-content: space-around;
     align-items: center;
+    font-size: 2.5rem;
+    border-bottom: 1px solid black;
 }
-img{
-    height: 300px;
-    width: 300px;
+
+.profile-picture img {
+    height: 450px;
+    width: 450px;
     object-fit: cover;
     border-radius: 9999px;
 }
-#menubtn{
+
+#menu-btn {
     display: none;
 }
 
+/* Section Headers */
+.section-header {
+    padding: 0px 45px;
+    font-size: 2rem;
+}
+
+/* About Section */
+.about-section .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+.about-section .about-image img {
+    border-radius: 10px;
+    width: 300px;
+}
+
+.about-section .about-text {
+    width: 500px;
+    text-align: left;
+    line-height: 30px;
+}
+
+/* Skills Section */
+.skills-section .content {
+    display: flex;
+    justify-content: space-around;
+    gap: 200px;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid black;
+    font-size: 1.2rem;
+}
+.skills-section .content div{
+    padding: 0px 100px;
+    display: flex;
+    align-items: top;
+    gap: 100px;
+}
+
+.skills-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.skills-section li {
+    padding: 5px 0;
+}
+.skills-image img{
+    height: 280px;
+    width: 400px;
+    object-fit: cover;
+}
+
+/* Works Section */
+.works-section .content {
+    padding: 30px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+
+}
+
+.works-section li {
+    padding: 5px 0;
+}
+.works-image img{
+    height: 280px;
+    width: 400px;
+    object-fit: cover;
+}
+
+/* Contact Section */
+.contact-section .content {
+    padding: 30px;
+    font-size: 1.2rem;
+}
+
+.contact-section ul {
+    list-style: none;
+}
+
+.contact-section li {
+    padding: 5px 0;
+}
+
+.contact-section li a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 650px) {
     .menu {
         display: none;
     }
-    #menubtn{
+
+    #menu-btn {
         display: block;
     }
-}
+    .profile-picture img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 9999px;
+    }
+    .about-section{
+        padding: 20px;
+    }
+    .about-section .about-image img,
+    .skills-image img,
+    .works-image img{
+        width: 280px;
+    }
+    .about-section .about-text{
+        text-align: left;
+        line-height: 30px;
+        width: 100px;
+    }
 
-.card2{
-    padding: 50px;
-}
-
-.card2 h2{
-    padding: 0px 45px;
-}
-.content{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* padding: 30px; */
-}
-.content section{
-    width: 40%;
-}
-.content img{
-    border-radius: 10px;
 }
 
 @media only screen and (max-width: 1144px) {
-    .container{
-        margin: 20px;
-    }
-    .main{
+    
+    .hero-section {
         display: flex;
         flex-direction: column-reverse;
-        /* gap: 10px; */
         padding: 0;
         height: 80vh;
         justify-content: space-around;
+        font-size: 1rem;
     }
-    nav{
+
+   
+    .navbar {
         padding: 20px;
         justify-content: space-between;
     }
-    
+
+    .about-section .content, 
+    .skills-section .content,
+    .works-section .content{
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .about-section .about-text, 
+    .skills-section section,
+    .contact-section .content {
+        width: 100%;
+        text-align: center;
+    }
 }
-
-

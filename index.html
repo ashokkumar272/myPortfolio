@@ -1,63 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashok Kumar</title>
+    <title>Ashok Kumar - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <div class="container card1" id="home">
-        <nav>
+    <div class="container home-section" id="home">
+        <nav class="navbar">
             <div class="logo">Ashok's Portfolio</div>
             <div class="menu">
-                <ul class="menuList">
+                <ul class="menu-list">
                     <li><a href='#home'>Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="skills">Skills</a></li>
-                    <li><a href="works">Works</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <button class="fas fa-list text-green-500" id="menubtn"></button>
+            <button class="fas fa-list text-green-500" id="menu-btn"></button>
         </nav>
+
         <div class="diabox">
             <ul id="menuList">
                 <li><a href='#home'>Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="skills">Skills</a></li>
-                <li><a href="works">Works</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-        <div class="main">
+
+        <div class="hero-section">
             <div>
                 <h1>Hey!</h1>
-                <h1> This is <span style="color: blueviolet;">Ashok</span>.</h1>
+                <h1>This is <span style="color: blueviolet;">Ashok</span>.</h1>
                 <h1>Web Designer.</h1>
             </div>
-            <div class="picture"><img src="profile.jpg" alt=""></div>
-
+            <div class="profile-picture"><img src="profile.jpg" alt="Profile picture of Ashok Kumar"></div>
         </div>
-
     </div>
-    <div class="container card2" id="about">
-        <h2 class="header">About Me</h2>
+
+    <div class="container about-section" id="about">
+        <h2 class="section-header">About Me</h2>
         <div class="content">
-            <section>
-                <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_stack_banner.jpg" alt="">
+            <section class="about-image">
+                <img src="profile.jpg" alt="picture">
             </section>
-            <section>
-            <p>I am Ashok Kumar. I am currently pursuing B.Tech Degree from SRM University AP. This is my Second year. I like to sing and listen to songs. Apart from this I am passionate about Web Development. I have learnt HTML and CSS. I love to design layouts of websites using what I have learnt till now. I'm doing this site as my first project in Web Development.</p>
-        </section>
+            <section class="about-text">
+                <p>Hi! I’m Ashok Kumar, a B.Tech. student at SRM University, Andhra Pradesh, specializing in Computer
+                    Science. I’m passionate about web development, UI/UX design, and building solutions that focus on
+                    both function and aesthetics.</p>
+                <p>
+                    I’ve worked on projects like a task management app and am currently developing an e-commerce
+                    platform with a product recommendation system. I love tackling challenges, and I’m constantly
+                    learning to improve my skills in C++, JavaScript, MongoDB, and more.
+                </p>
+                <p>
+                    Outside of coding, I’m a big believer in self-growth and enjoy music and reflecting on life. Let’s
+                    create something amazing together!
+                </p>
+            </section>
         </div>
     </div>
+
+    <!-- Skills Section -->
+    <div class="container skills-section" id="skills">
+        <h2 class="section-header">Skills</h2>
+        <div class="content">
+            <div>
+                <section>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>VS Code</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="skills-image">
+                <img src="https://www.talentlms.com/blog/wp-content/uploads/2024/01/TLMS_20240104_1200x628-1.png"
+                    alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Work Section -->
+    <div class="container works-section" id="works">
+        <h2 class="section-header">Works</h2>
+        <div class="content">
+            <div>
+                <div class="works-image">
+                    <img src="works.png" alt="">
+                </div>
+            </div>
+            <div>
+                <p>Check out some of the projects I've worked on:</p>
+                <ul>
+                    <li>To-do List App</li>
+                    <li>Personal Portfolio</li>
+                    <li>AirBnb Clone</li>
+                    <li>Netflix Clone</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container contact-section" id="contact">
+        <h2 class="section-header">Contact</h2>
+        <div class="content">
+            <p>Feel free to reach out:</p>
+            <ul>
+                <li>Email: ashok_kumar@srmap.edu.in</li>
+                <li>LinkedIn: <a target="_blank" href="www.linkedin.com/in/ashok-kumar-767298260">Ashok's LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
-
 
 </html>
