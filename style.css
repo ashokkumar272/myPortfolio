@@ -1,7 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: black;
+}
+p{
+    line-height: 50px;
+}
+a:link{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+}
 /* General Container */
 .container {
     margin: 0px;
-    background-color: white;
+    /* background-color: black; */
+    color: white;
     display: flex;
     flex-direction: column;
     position: static;
@@ -12,18 +34,18 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0px 50px;
+    padding: 20px 50px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bolder;
 }
 
 .menu-list {
     display: flex;
     list-style: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .menu-list li {
@@ -31,15 +53,18 @@
     cursor: pointer;
     padding: 2px 15px;
     border-radius: 5px;
+    color: white;
 }
 
 .menu-list li a:link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
-
+.menu-list li a:link{
+    color: white;
+}
 .menu-list li:hover {
-    background-color: rgb(184, 184, 184);
+    font-size: 1.6rem;
 }
 
 /* Mobile Menu List */
@@ -58,15 +83,17 @@
     gap: 10px;
     border-radius: 10px;
     display: none;
+    background-color: black;
+    border: 1px solid white;
 }
 
 #menuList li a:link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #menuList li a:visited {
-    color: black;
+    color: white;
 }
 
 /* Hero Section */
@@ -75,8 +102,9 @@
     padding: 80px 0px;
     justify-content: space-around;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     border-bottom: 1px solid black;
+    height: 70vh;
 }
 
 .profile-picture img {
@@ -93,17 +121,25 @@
 /* Section Headers */
 .section-header {
     padding: 0px 45px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 /* About Section */
+
+.about-section{
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .about-section .content {
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid black;
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 .about-section .about-image img {
     border-radius: 10px;
@@ -111,20 +147,27 @@
 }
 
 .about-section .about-text {
-    width: 500px;
+    width: 60vw;
     text-align: left;
     line-height: 30px;
+    text-align: center;
 }
 
 /* Skills Section */
+.skills-section{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .skills-section .content {
     display: flex;
     justify-content: space-around;
     gap: 200px;
-    align-items: center;
+    /* align-items: center; */
     padding: 30px;
     border-bottom: 1px solid black;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 .skills-section .content div{
     padding: 0px 100px;
@@ -155,42 +198,64 @@
 }
 
 /* Works Section */
-.works-section .content {
-    padding: 30px;
-    border-bottom: 1px solid black;
+.works-section .content{
+    padding: 0px 150px;
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+
+
+.section-1{
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    justify-content: center;
+}
+.section-2{
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    justify-content: center;
+}
+.works-section .content div{
+    height: 400px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 
 }
 
-.works-section li {
-    padding: 5px 0;
-}
-.works-image img{
-    height: 280px;
-    width: 400px;
+.works-section .content img{
+    height: 250px;
+    /* width: 400px; */
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.815), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: height 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.works-section .content img:hover{
+    height: 270px;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
 }
 
 /* Contact Section */
-.contact-section .content {
-    padding: 30px;
-    font-size: 1.2rem;
+.contact-section{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
 }
-
-.contact-section ul {
+.contact-section p{
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+.contact-section ul{
+    font-size: 1.5rem;
     list-style: none;
-}
-
-.contact-section li {
-    padding: 5px 0;
-}
-
-.contact-section li a {
-    color: blue;
-    text-decoration: none;
 }
 
 /* Responsive Design */
