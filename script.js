@@ -1,6 +1,7 @@
 // Updated IDs based on the new HTML structure
-const menuBtn = document.getElementById('menu-btn'); // Updated ID for the menu button
-const menuList = document.getElementById('menuList'); // Menu list ID remains the same
+const menuBtn = document.getElementById('menu-btn');
+const menuList = document.getElementById('menuList');
+const menuItems = document.querySelectorAll('#menuList li a');
 
 // Toggle the display of the menu list when the menu button is clicked
 menuBtn.addEventListener('click', (e) => {
@@ -16,5 +17,21 @@ menuBtn.addEventListener('click', (e) => {
 document.addEventListener('click', (e) => {
     if (!menuBtn.contains(e.target) && !menuList.contains(e.target)) {
         menuList.style.display = 'none'; // Hide the menu
+    }
+});
+
+// Close menu when a menu item is clicked (for mobile)
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        menuList.style.display = 'none';
+    });
+});
+
+// Handle window resize to manage menu visibility
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 860) {
+        // If window is resized larger than mobile breakpoint
+        // Hide mobile menu if it was open
+        menuList.style.display = 'none';
     }
 });
