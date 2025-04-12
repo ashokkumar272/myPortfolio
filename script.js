@@ -1,37 +1,60 @@
-// Updated IDs based on the new HTML structure
-const menuBtn = document.getElementById('menu-btn');
-const menuList = document.getElementById('menuList');
-const menuItems = document.querySelectorAll('#menuList li a');
-
-// Toggle the display of the menu list when the menu button is clicked
-menuBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevent click event from propagating to the document
-    if (menuList.style.display === 'none' || menuList.style.display === '') {
-        menuList.style.display = 'flex';
-    } else {
-        menuList.style.display = 'none';
-    }
-});
-
-// Close the menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!menuBtn.contains(e.target) && !menuList.contains(e.target)) {
-        menuList.style.display = 'none'; // Hide the menu
-    }
-});
-
-// Close menu when a menu item is clicked (for mobile)
-menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        menuList.style.display = 'none';
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.left-section nav');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
     });
-});
-
-// Handle window resize to manage menu visibility
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 860) {
-        // If window is resized larger than mobile breakpoint
-        // Hide mobile menu if it was open
-        menuList.style.display = 'none';
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            
+            // Only prevent default for hash links (links to sections within the same page)
+            if (targetId.startsWith('#') && targetId !== '#') {
+                e.preventDefault();
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        nav.style.display = 'none';
+                    }
+                }
+            }
+            // For regular page links, let the default behavior happen
+        });
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            nav.style.display = '';
+        }
+    });
+    
+    // Button click handlers
+    const hireMeBtn = document.querySelector('.hire-me');
+    const seeProjectsBtn = document.querySelector('.see-projects');
+    const letsTalkBtn = document.querySelector('.lets-talk');
+    
+    if (hireMeBtn) {
+        hireMeBtn.addEventListener('click', function() {
+            alert('Hire Me button clicked! This would typically open a contact form.');
+        });
+    }
+    
+    
+    if (letsTalkBtn) {
+        letsTalkBtn.addEventListener('click', function() {
+            
+        });
     }
 });

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ashok Kumar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .projects-section {
+            padding: 150px 0 100px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .section-header h2 span {
+            color: #1840b9;
+        }
+        
+        .section-header p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .filter-btn {
+            background: none;
+            border: none;
+            padding: 8px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #7f8c8d;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #1840b9;
+            color: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            background-color: white;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
+        .project-info {
+            padding: 25px;
+        }
+        
+        .project-info h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .project-info p {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .project-tag {
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #1840b9;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            color: #1840b9;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .project-link:hover {
+            color: #123288;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="left-section">
+                <div class="logo">Ashok.</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html" class="active">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-section">
+                <button class="lets-talk">Let's Talk</button>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My <span>Projects</span></h2>
+                    <p>Here are some of my recent projects that showcase my skills and expertise in web development</p>
+                </div>
+                
+                <div class="project-filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Web Apps</button>
+                    <button class="filter-btn">Frontend</button>
+                    <button class="filter-btn">Backend</button>
+                    <button class="filter-btn">Clones</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="Todo.png" alt="Todo App">
+                        </div>
+                        <div class="project-info">
+                            <h3>Todo Application</h3>
+                            <p>A full-featured task management application with drag-and-drop functionality, task categories, and reminder features.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="Calculator.png" alt="Calculator App">
+                        </div>
+                        <div class="project-info">
+                            <h3>Calculator App</h3>
+                            <p>An interactive calculator with support for advanced mathematical operations and a clean, intuitive interface.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="CLone_AirBnb.png" alt="Airbnb Clone">
+                        </div>
+                        <div class="project-info">
+                            <h3>Airbnb Clone</h3>
+                            <p>A responsive clone of the Airbnb website, featuring property listings, search functionality, and user authentication.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Express</span>
+                                <span class="project-tag">MongoDB</span>
+                                <span class="project-tag">Auth</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="Clone_X.png" alt="Twitter Clone">
+                        </div>
+                        <div class="project-info">
+                            <h3>Twitter Clone</h3>
+                            <p>A social media application inspired by Twitter, with real-time updates, user profiles, and tweet functionality.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">Socket.io</span>
+                                <span class="project-tag">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="Product.png" alt="E-commerce Product Page">
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce Product Page</h3>
+                            <p>A responsive product page with image carousel, product variants, and an add-to-cart functionality.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="facebook.png" alt="Facebook Clone">
+                        </div>
+                        <div class="project-info">
+                            <h3>Facebook Clone</h3>
+                            <p>A social media platform clone with features like news feed, user profiles, friend requests, and real-time messaging.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Redux</span>
+                                <span class="project-tag">Firebase</span>
+                                <span class="project-tag">Auth</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Here you would implement actual filtering functionality
+                // For now, this is just a UI demonstration
+            });
+        });
+    </script>
+</body>
+</html>

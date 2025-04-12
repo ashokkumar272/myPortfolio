@@ -1,171 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ashok Kumar - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
-
-  <body>
-    <div class="container home-section" id="home">
-      <nav class="navbar">
-        <div class="logo">Ashok's Portfolio</div>
-        <div class="menu">
-          <ul class="menu-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Kumar - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="left-section">
+                <div class="logo">Ashok.</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-section">
+                <button class="lets-talk">Let's Talk</button>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </div>
-        <button class="fas fa-bars" id="menu-btn" aria-label="Toggle menu"></button>
-      </nav>
+    </header>
 
-      <div class="diabox">
-        <ul id="menuList">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="hero-section">
-        <div>
-          <h1>Hey!</h1>
-          <h1>This is <span style="color: blueviolet">Ashok</span>.</h1>
-          <h1>Web Designer.</h1>
-        </div>
-        <div class="profile-picture">
-          <img src="profile.jpg" alt="Profile picture of Ashok Kumar" />
-        </div>
-      </div>
-    </div>
-
-    <div class="container about-section" id="about">
-      <h2 class="section-header">A Bit About Me</h2>
-      <div class="content">
-        <section class="about-text">
-          <p>
-            Hi! I'm Ashok Kumar, a B.Tech. student at SRM University, Andhra
-            Pradesh, specializing in Computer Science. I'm passionate about web
-            development and building solutions that focus on both function and
-            aesthetics.
-          </p>
-          <p>
-            I've worked on projects like a task management app and am currently
-            developing an e-commerce platform with a product recommendation
-            system. I love tackling challenges, and I'm constantly learning to
-            improve my skills in C++, JavaScript, and JavaScript based
-            frameworks like React.js.
-          </p>
-          <p>
-            Outside of coding, I'm a big believer in self-growth and enjoy
-            music. Let's create something amazing together!
-          </p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Hi, I'm <span>Ashok Kumar</span></h1>
+                    <h2>Full Stack Developer </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore et officiis suscipit ut assumenda libero tenetur expedita eaque, quaerat quasi.</p>
+                    <div class="hero-buttons">
+                        <button class="hire-me" onclick="location.href='contact.html'">Hire Me</button>
+                        <button class="see-projects" onclick="location.href='projects.html'">See Projects</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for hero image -->
+                    <div class="image-placeholder">
+                      <img src="dp.jpg" alt="Ashok Kumar" class="profile-image">
+                    </div>
+                </div>
+            </div>
         </section>
-      </div>
-    </div>
-
-    <!-- Skills Section -->
-    <div class="container skills-section" id="skills">
-      <h2 class="section-header">Skills</h2>
-      <div class="content">
-        <section>
-          <h3>Languages</h3>
-          <ul>
-            <li>C</li>
-            <li>C++</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Tools</h3>
-          <ul>
-            <li>Git</li>
-            <li>VS Code</li>
-          </ul>
-        </section>
-      </div>
-    </div>
-
-    <!-- Work Section -->
-    <div class="container works-section" id="works">
-      <h2 class="section-header">Works</h2>
-      <div class="content">
-        <section class="section-1">
-          <div class="work1">
-            <img src="Todo.png" alt="Todo List Project Screenshot" />
-            <a target="_blank" href="https://github.com/ashokkumar272/ToDo.git"
-              >Todo List</a
-            >
-          </div>
-          <div class="work2">
-            <img src="Clone_X.png" alt="X Clone Project Screenshot" />
-            <a
-              target="_blank"
-              href="https://github.com/ashokkumar272/Clone_X.git"
-              >X</a
-            >
-          </div>
-        </section>
-        <section class="section-2">
-          <div class="work3">
-            <img src="Clone_AirBnb.png" alt="AirBnb Clone Project Screenshot" />
-            <a
-              target="_blank"
-              href="https://github.com/ashokkumar272/Clone_airbnb.git"
-              >AirBnb</a
-            >
-          </div>
-          <div class="work4">
-            <img src="Product.png" alt="E-commerce Template Screenshot" />
-            <a
-              target="_blank"
-              href="https://github.com/ashokkumar272/E-Commerce-template.git"
-              >Promotional Website-Template
-            </a>
-          </div>
-          <div class="work5">
-            <img src="Calculator.png" alt="Calculator Project Screenshot" />
-            <a
-              target="_blank"
-              href="https://github.com/ashokkumar272/calculator.git"
-              >Calculator</a
-            >
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="container contact-section" id="contact">
-      <h2 class="section-header">Contact</h2>
-      <div class="content">
-        <p>Feel free to reach out:</p>
-        <ul>
-          <li>Email : <a href="mailto:ashok_kumar@srmap.edu.in">ashok_kumar@srmap.edu.in</a></li>
-          <li>
-            LinkedIn :
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/ashok-kumar-767298260/"
-              >Ashok's LinkedIn</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
+    </main>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
