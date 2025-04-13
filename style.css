@@ -173,6 +173,36 @@ nav ul li a:hover, nav ul li a.active {
     border: 2px solid #1840b9;
 }
 
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    color: #1840b9;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link i {
+    font-size: 18px;
+}
+
+.social-link:hover {
+    background-color: #1840b9;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(24, 64, 185, 0.3);
+}
+
 .see-projects:hover {
     background-color: #1840b9;
     color: white;
