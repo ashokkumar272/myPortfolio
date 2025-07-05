@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (hireMeBtn) {
         hireMeBtn.addEventListener('click', function() {
-            alert('Hire Me button clicked! This would typically open a contact form.');
+            
         });
     }
     
