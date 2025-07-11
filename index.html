@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ashok Kumar - Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-      <div class="container">
-          <div class="logo">Ashok.</div>
-          <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html" class="active">About</a></li>
-              <li><a href="projects.html">Portfolio</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        
+      <div class="container header-container">
+        <div class="logo">Ashok.</div>
+        <nav>
+          <ul>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
         <div class="right-section">
-          <button class="lets-talk">Let's Talk</button>
+          <button class="btn btn-primary lets-talk">Let's Talk</button>
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
           <div class="mobile-menu-btn">
             <i class="fas fa-bars"></i>
           </div>
@@ -30,41 +39,463 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Hi, I'm <span>Ashok Kumar</span></h1>
-                    <h2>Full Stack Developer & AI Enthusiast</h2>
-                    <p>Computer Science student at SRM University with a passion for building innovative web applications and AI-powered solutions. I specialize in React, Node.js, and modern full-stack development, with experience in creating scalable applications that make a real impact.</p>
-                    <div class="hero-buttons">
-                        <button class="hire-me" onclick="window.open('Resume.pdf', '_blank')">Resume</button>
-                        <button class="see-projects" onclick="location.href='projects.html'">See Projects</button>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/ashok-kumar-767298260/" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/ashokkumar272" class="social-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/ashok_kumar.272/" class="social-link" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <!-- Placeholder for hero image -->
-                    <div class="image-placeholder">
-                      <img src="profile.jpg" alt="Ashok Kumar" class="profile-image">
-                    </div>
-                </div>
+      <section class="hero" id="home">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <h1>Hi, I'm <span>Ashok Kumar</span></h1>
+            <h2>Full Stack Developer & AI Enthusiast</h2>
+            <p>
+              Computer Science student at SRM University with a passion for
+              building innovative web applications and AI-powered solutions. I
+              specialize in React, Node.js, and modern full-stack development,
+              with experience in creating scalable applications that make a real
+              impact.
+            </p>
+            <div class="hero-buttons">
+              <button class="btn btn-primary hire-me">Resume</button>
+              <button class="btn btn-outline see-projects">See Projects</button>
             </div>
-        </section>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/ashok-kumar-767298260/"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/ashokkumar272"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="social-link" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/ashok_kumar.272/"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/assets/profile.jpg" alt="Ashok Kumar" class="profile-image" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="container">
+          <h2>About <span>Me</span></h2>
+          <div class="about-container">
+            <div class="about-content">
+              <p class="about-text">
+                Hello! I'm Ashok Kumar, a passionate Computer Science student at
+                SRM University, Guntur, pursuing my Bachelor's degree (Expected
+                May 2027). I'm a dedicated Full Stack Developer with a strong
+                foundation in modern web technologies and AI-powered
+                applications.
+              </p>
+              <p class="about-text">
+                With hands-on experience in developing scalable web applications
+                using React, Node.js, and MongoDB, I've successfully built
+                projects that serve real-world purposes. My expertise spans from
+                frontend development with React and responsive design to backend
+                systems with Express.js and database management. I'm
+                particularly passionate about integrating AI capabilities into
+                web applications, as demonstrated through my work with chatbots
+                and AI-driven task management systems.
+              </p>
+              <p class="about-text">
+                Currently, I'm expanding my skillset through internships and
+                continuous learning, having recently completed an AI-ML
+                internship and working on innovative projects that combine
+                traditional web development with cutting-edge AI technologies.
+              </p>
+              <div class="skills">
+                <h3>Technical Skills</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">C</span>
+                  <span class="skill-tag">C++</span>
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">HTML/CSS</span>
+                  <span class="skill-tag">React.js</span>
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">Express.js</span>
+                  <span class="skill-tag">Flask</span>
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">MySQL</span>
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">Postman</span>
+                  <span class="skill-tag">Socket.IO</span>
+                  <span class="skill-tag">RESTful APIs</span>
+                  <span class="skill-tag">Tailwind CSS</span>
+                  <span class="skill-tag">Google APIs</span>
+                </div>
+              </div>
+              <div class="experience">
+                <h3>Experience & Education</h3>
+                <div class="experience-item">
+                  <h4>Intern</h4>
+                  <div class="company">Edubot Technologies</div>
+                  <div class="period">May 2025 - July 2025</div>
+                  <p>
+                    Learned Flask backend development and React with TypeScript.
+                    Worked on developing Finlogix, a Personal Finance Manager
+                    application using these technologies.
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <h4>Member</h4>
+                  <div class="company">NextTech Lab</div>
+                  <div class="period">September 2023 - Present</div>
+                  <p>
+                    Participate in weekly coding challenges and algorithmic
+                    problem-solving sessions. Assist in mentoring junior members
+                    on full-stack development projects.
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <h4>Bachelor of Technology in Computer Science</h4>
+                  <div class="company">
+                    SRM University, Guntur, Andhra Pradesh
+                  </div>
+                  <div class="period">August 2023 - May 2027 (Expected)</div>
+                  <p>
+                    Relevant Coursework: Data Structures, Algorithms,
+                    Object-Oriented Programming (OOP), Database Management
+                    Systems, Artificial Intelligence & Machine Learning (AI-ML)
+                  </p>
+                </div>
+              </div>
+              <div class="connect" style="margin-top: 40px">
+                <h3>Connect With Me</h3>
+                <div
+                  class="social-links"
+                  style="display: flex; gap: 15px; margin-top: 15px"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/ashok-kumar-767298260/"
+                    class="social-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://github.com/ashokkumar272"
+                    class="social-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/ashok_kumar.272/"
+                    class="social-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="projects-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>My <span>Projects</span></h2>
+            <p>
+              Here are some of my recent projects that showcase my skills in
+              full-stack development, AI integration, and modern web
+              technologies
+            </p>
+          </div>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/studygenie.png" alt="StudyGenie Project" />
+              </div>
+              <div class="project-info">
+                <h3>StudyGenie: AI Chatbot for Learners</h3>
+                <p>
+                  A scalable AI-powered chatbot tailored for students, enabling
+                  24/7 personalized doubt resolution and boosting learning
+                  efficiency by up to 40%. Features contextual side chat system
+                  with multi-threaded conversation handling and real-time
+                  infrastructure with <100ms latency.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">React.js</span>
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">MongoDB</span>
+                  <span class="project-tag">Google Gemini API</span>
+                  <span class="project-tag">Socket.IO</span>
+                  <span class="project-tag">Tailwind CSS</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://studygenie-7fc7.onrender.com/"
+                    class="project-link"
+                    target="_blank"
+                    ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/ashokkumar272/StudyGenie.git"
+                    class="project-link"
+                    target="_blank"
+                    ><i class="fab fa-github"></i> Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/trainbuddy.png" alt="TrainBuddy Project" />
+              </div>
+              <div class="project-info">
+                <h3>TrainBuddy: Connecting Travellers</h3>
+                <p>
+                  A real-time social platform for train travelers using
+                  WebSocket-powered chat and interest-based matching algorithms.
+                  Deployed scalable backend with MongoDB and reduced latency by
+                  25% through query optimization. Features secure user
+                  authentication and profile management for 100+ test users.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">Express.js</span>
+                  <span class="project-tag">MongoDB</span>
+                  <span class="project-tag">Socket.IO</span>
+                  <span class="project-tag">React Native</span>
+                  <span class="project-tag">IRCTC API</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://trainbuddy.onrender.com/"
+                    class="project-link"
+                    target="_blank"
+                    ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/ashokkumar272/TrainBuddy.git"
+                    class="project-link"
+                    target="_blank"
+                    ><i class="fab fa-github"></i> Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/rundown.png" alt="RunDown Project" />
+              </div>
+              <div class="project-info">
+                <h3>RunDown: AI Task Manager</h3>
+                <p>
+                  An AI-driven task manager with natural language processing
+                  (NLP) for task queries, improving user productivity by 30%.
+                  Integrated RESTful APIs to automate calendar scheduling and
+                  email reminders. Features responsive UI with accessibility
+                  support across multiple device formats.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Flask</span>
+                  <span class="project-tag">Google Gemini API</span>
+                  <span class="project-tag">Google Calendar API</span>
+                  <span class="project-tag">Gmail API</span>
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">NLP</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://rundown-sx8n.onrender.com/"
+                    class="project-link"
+                    target="_blank"
+                    ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/ashokkumar272/RunDown.git"
+                    class="project-link"
+                    target="_blank"
+                    ><i class="fab fa-github"></i> Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/finlogix.png" alt="Finlogix Personal Finance Manager" />
+              </div>
+              <div class="project-info">
+                <h3>Finlogix: Personal Finance Manager</h3>
+                <p>
+                  A comprehensive personal finance management application developed during my internship at Edubot Technologies. Built with Flask backend and React with TypeScript frontend, providing users with tools to track expenses, manage budgets, and analyze financial patterns.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Flask</span>
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">TypeScript</span>
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">RESTful APIs</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://fin-logix.vercel.app" class="project-link">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/ashokkumar272/FinLogix" class="project-link">
+                    <i class="fab fa-github"></i> Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/forever.png" alt="Forever Ecommerce Platform" />
+              </div>
+              <div class="project-info">
+                <h3>Forever: Full-Stack Ecommerce Platform</h3>
+                <p>
+                  A comprehensive full-stack ecommerce application providing
+                  complete online shopping experience. Features user
+                  authentication, product catalog, shopping cart, secure
+                  checkout, and admin dashboard. Built with modern web
+                  technologies and responsive design for optimal user experience
+                  across all devices.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">React.js</span>
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">Express.js</span>
+                  <span class="project-tag">MongoDB</span>
+                  <span class="project-tag">JWT</span>
+                  <span class="project-tag">RESTful APIs</span>
+                  <span class="project-tag">Responsive Design</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://forever-dl1q.onrender.com/"
+                    class="project-link"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/ashokkumar272/Forever.git"
+                    class="project-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Get in <span>Touch</span></h2>
+            <p>
+              I'm always open to discussing new opportunities, collaborations,
+              or just having a friendly chat about technology and development.
+            </p>
+          </div>
+          <div class="contact-container">
+            <div class="contact-card">
+              <h3 class="contact-card-title">Contact Information</h3>
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <strong>Location</strong>Guntur, Andhra Pradesh, India
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-text">
+                  <strong>Email</strong>ashokkumar.vg2@gmail.com
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="contact-text">
+                  <strong>Call Me</strong>+91 7275530251
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="contact-text">
+                  <strong>Education</strong>SRM University, Guntur
+                </div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <h3 class="contact-card-title">Follow Me</h3>
+              <p class="contact-text">Connect with me on social media</p>
+              <div class="social-links">
+                <a
+                  href="https://www.linkedin.com/in/ashok-kumar-767298260/"
+                  class="social-link"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  href="https://github.com/ashokkumar272"
+                  class="social-link"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/ashok_kumar.272/"
+                  class="social-link"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">Ashok.</div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="copyright">
+            &copy; 2025 Ashok Kumar. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
