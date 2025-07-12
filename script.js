@@ -77,9 +77,35 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Mobile menu toggle
-document.querySelector(".mobile-menu-btn").addEventListener("click", () => {
-  const nav = document.querySelector("nav ul");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+const mobileNavDropdown = document.getElementById("mobile-nav-dropdown");
+
+mobileMenuBtn.addEventListener("click", () => {
+  // Toggle dropdown visibility
+  if (mobileNavDropdown.style.display === "block") {
+    mobileNavDropdown.style.display = "none";
+  } else {
+    mobileNavDropdown.style.display = "block";
+  }
+});
+
+// Hide dropdown when clicking outside
+
+document.addEventListener("click", (e) => {
+  if (
+    mobileNavDropdown.style.display === "block" &&
+    !mobileNavDropdown.contains(e.target) &&
+    !mobileMenuBtn.contains(e.target)
+  ) {
+    mobileNavDropdown.style.display = "none";
+  }
+});
+
+// Hide dropdown when a link inside it is clicked
+mobileNavDropdown.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileNavDropdown.style.display = "none";
+  });
 });
 
 // Project card animations
