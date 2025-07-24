@@ -26,24 +26,19 @@
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
-
-        <!-- Mobile Dropdown Menu (hidden by default) -->
-        <div class="mobile-nav-dropdown" id="mobile-nav-dropdown" style="display: none;">
-          <ul>
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
-        </div>
         <div class="right-section">
           <a href="#contact" class="btn btn-primary lets-talk">Let's Talk</a>
-          <button class="theme-toggle" id="theme-toggle">
-            <i class="fas fa-moon"></i>
-          </button>
-          <!-- <div class="mobile-menu-btn">
+          <div class="mobile-menu-btn">
             <i class="fas fa-bars"></i>
-          </div> -->
+          </div>
+          <div class="mobile-nav-dropdown" id="mobile-nav-dropdown">
+            <ul>
+              <li><a href="#home" class="nav-link">Home</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -62,8 +57,16 @@
               impact.
             </p>
             <div class="hero-buttons">
-              <a href="/assets/Resume.pdf" class="btn btn-primary hire-me" target="_blank" rel="noopener">Resume</a>
-              <a href="#portfolio" class="btn btn-outline see-projects">See Projects</a>
+              <a
+                href="/assets/Resume.pdf"
+                class="btn btn-primary hire-me"
+                target="_blank"
+                rel="noopener"
+                >Resume</a
+              >
+              <a href="#portfolio" class="btn btn-outline see-projects"
+                >See Projects</a
+              >
             </div>
             <div class="social-links">
               <a
@@ -93,7 +96,11 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="/assets/profile.jpg" alt="Ashok Kumar" class="profile-image" />
+            <img
+              src="/assets/profile.jpg"
+              alt="Ashok Kumar"
+              class="profile-image"
+            />
           </div>
         </div>
       </section>
@@ -227,8 +234,8 @@
               technologies
             </p>
           </div>
-          <div class="projects-grid">
-            <div class="project-card">
+          <div class="projects-container">
+            <div class="project-item project-card">
               <div class="project-image">
                 <img src="/assets/studygenie.png" alt="StudyGenie Project" />
               </div>
@@ -265,7 +272,7 @@
                 </div>
               </div>
             </div>
-            <div class="project-card">
+            <div class="project-item project-card">
               <div class="project-image">
                 <img src="/assets/trainbuddy.png" alt="TrainBuddy Project" />
               </div>
@@ -303,7 +310,7 @@
                 </div>
               </div>
             </div>
-            <div class="project-card">
+            <div class="project-item project-card">
               <div class="project-image">
                 <img src="/assets/rundown.png" alt="RunDown Project" />
               </div>
@@ -340,14 +347,21 @@
                 </div>
               </div>
             </div>
-            <div class="project-card">
+            <div class="project-item project-card">
               <div class="project-image">
-                <img src="/assets/finlogix.png" alt="Finlogix Personal Finance Manager" />
+                <img
+                  src="/assets/finlogix.png"
+                  alt="Finlogix Personal Finance Manager"
+                />
               </div>
               <div class="project-info">
                 <h3>Finlogix: Personal Finance Manager</h3>
                 <p>
-                  A comprehensive personal finance management application developed during my internship at Edubot Technologies. Built with Flask backend and React with TypeScript frontend, providing users with tools to track expenses, manage budgets, and analyze financial patterns.
+                  A comprehensive personal finance management application
+                  developed during my internship at Edubot Technologies. Built
+                  with Flask backend and React with TypeScript frontend,
+                  providing users with tools to track expenses, manage budgets,
+                  and analyze financial patterns.
                 </p>
                 <div class="project-tags">
                   <span class="project-tag">Flask</span>
@@ -357,37 +371,33 @@
                   <span class="project-tag">RESTful APIs</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://fin-logix.vercel.app" class="project-link">
+                  <a href="https://fin-logix.vercel.app" class="project-link" target="_blank">
                     <i class="fas fa-external-link-alt"></i> Live Demo
                   </a>
-                  <a href="https://github.com/ashokkumar272/FinLogix" class="project-link">
+                  <a href="https://github.com/ashokkumar272/Finlogix" class="project-link" target="_blank">
                     <i class="fab fa-github"></i> Source Code
                   </a>
                 </div>
               </div>
             </div>
-            <div class="project-card">
+            <div class="project-item project-card">
               <div class="project-image">
-                <img src="/assets/forever.png" alt="Forever Ecommerce Platform" />
+                <img
+                  src="/assets/forever.png"
+                  alt="Forever Ecommerce Platform"
+                />
               </div>
               <div class="project-info">
                 <h3>Forever: Full-Stack Ecommerce Platform</h3>
                 <p>
-                  A comprehensive full-stack ecommerce application providing
-                  complete online shopping experience. Features user
-                  authentication, product catalog, shopping cart, secure
-                  checkout, and admin dashboard. Built with modern web
-                  technologies and responsive design for optimal user experience
-                  across all devices.
+                  A scalable ecommerce platform with secure authentication, product management, and payment integration. Built with React, Node.js, Express, and MongoDB, featuring a modern UI and responsive design.
                 </p>
                 <div class="project-tags">
-                  <span class="project-tag">React.js</span>
+                  <span class="project-tag">React</span>
                   <span class="project-tag">Node.js</span>
                   <span class="project-tag">Express.js</span>
                   <span class="project-tag">MongoDB</span>
-                  <span class="project-tag">JWT</span>
-                  <span class="project-tag">RESTful APIs</span>
-                  <span class="project-tag">Responsive Design</span>
+                  <span class="project-tag">Stripe API</span>
                 </div>
                 <div class="project-links">
                   <a
@@ -424,58 +434,16 @@
             <div class="contact-card">
               <h3 class="contact-card-title">Contact Information</h3>
               <div class="contact-info-item">
-                <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-text">
-                  <strong>Location</strong>Guntur, Andhra Pradesh, India
-                </div>
-              </div>
-              <div class="contact-info-item">
                 <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                <div class="contact-text">
-                  <strong>Email</strong>ashokkumar.vg2@gmail.com
-                </div>
+                <div class="contact-text"><strong>Email:</strong> ashokkumar.vg2@gmail.com</div>
               </div>
               <div class="contact-info-item">
-                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                <div class="contact-text">
-                  <strong>Call Me</strong>+91 7275530251
-                </div>
-              </div>
-              <div class="contact-info-item">
-                <div class="contact-icon">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="contact-text">
-                  <strong>Education</strong>SRM University, Guntur
-                </div>
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-text"><strong>Location:</strong> Guntur, Andhra Pradesh, India</div>
               </div>
             </div>
             <div class="contact-card">
-              <h3 class="contact-card-title">Follow Me</h3>
-              <p class="contact-text">Connect with me on social media</p>
-              <div class="social-links">
-                <a
-                  href="https://www.linkedin.com/in/ashok-kumar-767298260/"
-                  class="social-link"
-                  target="_blank"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a
-                  href="https://github.com/ashokkumar272"
-                  class="social-link"
-                  target="_blank"
-                  ><i class="fab fa-github"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/ashok_kumar.272/"
-                  class="social-link"
-                  target="_blank"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
+              <!-- Social links already present in About section, this card removed for brevity -->
           </div>
         </div>
       </section>
@@ -498,10 +466,8 @@
       </div>
     </footer>
 
-    <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
 
-    <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Back to Top">
       <i class="fas fa-arrow-up"></i>
     </button>

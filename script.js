@@ -1,31 +1,27 @@
-// Dark mode toggle functionality
+// Dark mode toggle functionality (guarded for missing element)
 const themeToggle = document.getElementById("theme-toggle");
-const themeIcon = themeToggle.querySelector("i");
-
-// Check for saved user preference or respect system preference
-const savedTheme = localStorage.getItem("theme");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-if (savedTheme === "dark" || (!savedTheme && prefersDarkScheme.matches)) {
-  document.body.classList.add("dark-mode");
-  themeIcon.classList.remove("fa-moon");
-  themeIcon.classList.add("fa-sun");
-}
-
-// Toggle theme on button click
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-
-  if (document.body.classList.contains("dark-mode")) {
+if (themeToggle) {
+  const themeIcon = themeToggle.querySelector("i");
+  const savedTheme = localStorage.getItem("theme");
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  if (savedTheme === "dark" || (!savedTheme && prefersDarkScheme.matches)) {
+    document.body.classList.add("dark-mode");
     themeIcon.classList.remove("fa-moon");
     themeIcon.classList.add("fa-sun");
-    localStorage.setItem("theme", "dark");
-  } else {
-    themeIcon.classList.remove("fa-sun");
-    themeIcon.classList.add("fa-moon");
-    localStorage.setItem("theme", "light");
   }
-});
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      themeIcon.classList.remove("fa-moon");
+      themeIcon.classList.add("fa-sun");
+      localStorage.setItem("theme", "dark");
+    } else {
+      themeIcon.classList.remove("fa-sun");
+      themeIcon.classList.add("fa-moon");
+      localStorage.setItem("theme", "light");
+    }
+  });
+}
 
 // Scroll progress indicator
 window.addEventListener("scroll", () => {
@@ -76,45 +72,38 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Mobile menu toggle
+// Mobile menu toggle using .is-open class (guarded for missing elements)
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const mobileNavDropdown = document.getElementById("mobile-nav-dropdown");
-
-mobileMenuBtn.addEventListener("click", () => {
-  // Toggle dropdown visibility
-  if (mobileNavDropdown.style.display === "block") {
-    mobileNavDropdown.style.display = "none";
-  } else {
-    mobileNavDropdown.style.display = "block";
-  }
-});
-
-// Hide dropdown when clicking outside
-
-document.addEventListener("click", (e) => {
-  if (
-    mobileNavDropdown.style.display === "block" &&
-    !mobileNavDropdown.contains(e.target) &&
-    !mobileMenuBtn.contains(e.target)
-  ) {
-    mobileNavDropdown.style.display = "none";
-  }
-});
-
-// Hide dropdown when a link inside it is clicked
-mobileNavDropdown.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileNavDropdown.style.display = "none";
+if (mobileMenuBtn && mobileNavDropdown) {
+  mobileMenuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileNavDropdown.classList.toggle("is-open");
   });
-});
+  // Hide dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      mobileNavDropdown.classList.contains("is-open") &&
+      !mobileNavDropdown.contains(e.target) &&
+      !mobileMenuBtn.contains(e.target)
+    ) {
+      mobileNavDropdown.classList.remove("is-open");
+    }
+  });
+  // Hide dropdown when a link inside it is clicked
+  mobileNavDropdown.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileNavDropdown.classList.remove("is-open");
+    });
+  });
+}
 
-// Project card animations
+// Project card animations (ensure .project-card class is present in HTML for this to work)
 const projectCards = document.querySelectorAll(".project-card");
 projectCards.forEach((card) => {
   card.addEventListener("mouseenter", () => {
     card.style.transform = "translateY(-10px)";
   });
-
   card.addEventListener("mouseleave", () => {
     card.style.transform = "translateY(0)";
   });
