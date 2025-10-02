@@ -86,6 +86,10 @@ p {
 
 section {
   padding: 80px 0;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .btn {
@@ -258,7 +262,7 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-  padding-top: 140px;
+  padding-top: 100px;
   /* padding-top: 80px; */
   padding-bottom: 80px;
   background: linear-gradient(
@@ -820,7 +824,7 @@ footer {
   }
 
   .hero {
-    padding-top: 120px;
+    padding-top: 100px;
   }
 
   section {
