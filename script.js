@@ -102,9 +102,29 @@ if (mobileMenuBtn && mobileNavDropdown) {
 const projectCards = document.querySelectorAll(".project-card");
 projectCards.forEach((card) => {
   card.addEventListener("mouseenter", () => {
-    card.style.transform = "translateY(-10px)";
+    card.style.transform = "translateY(-4px)";
   });
   card.addEventListener("mouseleave", () => {
     card.style.transform = "translateY(0)";
   });
 });
+
+// Reveal-on-scroll animations with reduced motion respect
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!prefersReducedMotion) {
+  const toReveal = document.querySelectorAll(
+    ".hero-content, .hero-image, .section-header, .project-item, .experience-item, .skill-tag, .contact-card"
+  );
+  toReveal.forEach(el => el.classList.add('reveal'));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  toReveal.forEach((el) => io.observe(el));
+}
